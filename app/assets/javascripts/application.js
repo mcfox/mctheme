@@ -21,8 +21,7 @@
 
 $(function() {
     $('nav#menu').mmenu({
-        wrappers: ["turbolinks"],
-        extensions	: [ 'theme-dark' ],
+        wrappers: ['turbolinks'],
         setSelected	: true,
         counters	: true,
         searchfield : {
@@ -32,12 +31,14 @@ $(function() {
             add 		: true,
             size		: 40,
             top 		: [
-                '<a href="#/"><span class="fa fa-home"></span></a>'
+                '<a href="#/"><span class="fa fa-home"></span></a>',
+                '<a href="#/"><span class="fa fa-search"></span></a>',
+                '<a href="#/"><span class="fa fa-plus"></span></a>'
             ],
             bottom 		: [
-                '<a href="#/"><span class="fa fa-twitter"></span></a>',
-                '<a href="#/"><span class="fa fa-facebook"></span></a>',
-                '<a href="#/"><span class="fa fa-youtube"></span></a>'
+                '<a href="#/"><span class="fa fa-question-circle"></span></a>',
+                '<a href="#/"><span class="fa fa-user"></span></a>',
+                '<a href="#/"><span class="fa fa-cogs"></span></a>',
             ]
         },
         sidebar		: {
@@ -54,18 +55,8 @@ $(function() {
         navbars		: [
             {
                 content		: [ 'searchfield' ]
-            }, {
-                type		: 'tabs',
-                content		: [
-                    '<a href="#panel-menu"><i class="fa fa-bars"></i> <span>Menu</span></a>',
-                    '<a href="#panel-account"><i class="fa fa-user"></i> <span>Account</span></a>',
-                    '<a href="#panel-cart"><i class="fa fa-shopping-cart"></i> <span>Cart</span></a>'
-                ]
-            }, {
+            },  {
                 content		: [ 'prev', 'breadcrumbs', 'close' ]
-            }, {
-                position	: 'bottom',
-                content		: [ '<a href="http://mmenu.frebsite.nl/wordpress-plugin" target="_blank">WordPress plugin</a>' ]
             }
         ]
     }, {

@@ -20,6 +20,18 @@ Getting Started
 adicionado o mmenu
 importado os arquivos .scss e .js
 
+Roadmap
+
+haml
+bootstrap
+material-design
+simple_form
+delayed_job
+charts
+AWS
+    s3
+    cloud-formation
+    deploy
 
 
 
