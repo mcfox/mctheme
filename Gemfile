@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'materialize-sass'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -28,7 +30,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'mysql2', '~> 0.3.18'
+gem 'mysql2'
 gem 'simple_form'
 group :development do
   gem 'better_errors'
