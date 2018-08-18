@@ -1,5 +1,5 @@
 $(function() {
-    $('nav#menu').mmenu({
+    var $menu = $('nav#menu').mmenu({
         wrappers: ['turbolinks'],
         setSelected	: true,
         counters	: true,
@@ -8,10 +8,10 @@ $(function() {
         },
         iconbar		: {
             add 		: true,
-            size		: 40,
+            size		: 60,
             top 		: [
                 '<a href="#/"><span class="fa fa-home"></span></a>',
-                '<a href="#/"><span class="fa fa-search"></span></a>',
+                '<a href="#/" class="drawer_toogle"><span class="fa fa-search"></span></a>',
                 '<a href="#/"><span class="fa fa-plus"></span></a>'
             ],
             bottom 		: [
@@ -23,7 +23,7 @@ $(function() {
         sidebar		: {
             collapsed		: {
                 use 			: '(min-width: 450px)',
-                size			: 40,
+                size			: 60,
                 hideNavbar		: false
             },
             expanded		: {
@@ -53,5 +53,29 @@ $(function() {
         alert( 'Funcionalidade ainda não implementada!' );
         return false;
     })
+
+
+    var $icon = $("#icon-open");
+    var API = $menu.data( "mmenu" );
+
+    $icon.on( "click", function() {
+        if ($icon.hasClass( "is-active" )) {
+            API.close();
+        } else {
+            API.open();
+        }
+    });
+
+    API.bind( "open:finish", function() {
+        setTimeout(function() {
+            $icon.addClass( "is-active" );
+        }, 100);
+    });
+    API.bind( "close:finish", function() {
+        setTimeout(function() {
+            $icon.removeClass( "is-active" );
+        }, 100);
+    });
+
 });
 

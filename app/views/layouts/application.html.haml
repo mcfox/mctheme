@@ -11,8 +11,9 @@
   %body
     #page
       .header
-        %a{:href => "#menu"}
-          %span
+        %button#icon-open.hamburger.hamburger--collapse{:type => "button"}
+          %span.hamburger-box
+            %span.hamburger-inner
         Tema McFox
       .content
         = yield

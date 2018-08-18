@@ -1,27 +1,2 @@
 %nav#menu
-  %ul
-    %li
-      %a{:href => "#/"} Home
-    %li
-      %span About us
-      %ul
-        %li
-          %a{:href => "#/"} History
-        %li
-          %span The team
-          %ul
-            %li
-              %a{:href => "#/"} Management
-            %li
-              %a{:href => "#/"} Sales
-            %li
-              %a{:href => "#/"} Development
-        %li
-          %a{:href => "#/"} Our address
-    %li
-      %a{:href => "#/"} Contact
-    %li.Divider Separador
-    %li
-      %a{:href => "#/"} Default demo
-    %li
-      %a{:href => "#/"} One page demo
+  = render_navigation(expand_all: true)
