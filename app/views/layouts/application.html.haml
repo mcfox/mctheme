@@ -11,10 +11,8 @@
   %body
     #page
       .header
-        %button#icon-open.hamburger.hamburger--collapse{:type => "button"}
-          %span.hamburger-box
-            %span.hamburger-inner
+        = render :partial => 'layouts/hamburger'
         Tema McFox
       .content
         = yield
-    = render 'layouts/main_menu'
+    = render :partial => 'layouts/main_menu'
